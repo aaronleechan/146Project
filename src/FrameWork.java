@@ -1,4 +1,3 @@
-
 public class FrameWork {
 	filePresenter presenter;
 
