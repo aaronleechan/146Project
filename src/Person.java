@@ -20,8 +20,27 @@ public class Person {
 		
 	}
 	
-	public void setID(int ID)
-	{
+	public int getAge(){
+		return this.age;
+	}
+	
+	public int getWt(){
+		return this.wt;
+	}
+	
+	public int getHt(){
+		return this.ht;
+	}
+	
+	public int getHrt(){
+		return this.hrt;
+	}
+	
+	public String getName(){
+		return this.name;
+	}
+	
+	public void setID(int ID){
 		this.ID = ID;
 	}
 	

@@ -51,33 +51,27 @@ public class allMethods {
 			private Node<T> root;
 			
 			//constructor
-			public BST()
-			{
+			public BST(){
 				root = null;
 			}
 			
 			//retrieves root
-				public Node<T> root()
-				{
+				public Node<T> root(){
 					return this.root;
 				}
 			
 			//isEmpty method
-			public boolean isEmpty()
-			{
+			public boolean isEmpty(){
 				return root == null;
 			}
 			
 			//contains method
-			public boolean contains(T x)
-			{
+			public boolean contains(T x){
 				return contains(x, root);
 			}
 			
-			private boolean contains(T x, Node<T> t)
-			{
-				if(t == null)
-				{
+			private boolean contains(T x, Node<T> t){
+				if(t == null){
 					return false;
 				}
 				int comparison = x.compareTo(t.ele);
@@ -86,12 +80,10 @@ public class allMethods {
 				{
 					return contains(x, t.left);
 				}
-				else if(comparison > 0)
-				{
+				else if(comparison > 0){
 					return contains(x, t.right);
 				}
-				else
-				{
+				else{
 					return true;
 				}
 			}
@@ -235,63 +227,16 @@ public class allMethods {
 					return 1 + size(t.left) + size(t.right);
 				}
 			}
-			
-			private int totalLeaves(Node<T> t)
-			{
-				if(t == null)
-				{
-					return 0;
-				}
-				else if(t.left == null && t.right == null)
-				{
-					return 1;
-				}
-				else
-				{
-					return totalLeaves(t.left) + totalLeaves(t.right); 
-				}
 				
-			}
-			
-			/**
-			 * totalLeaves
-			 * finds the total number of leaves
-			 */
-			public int totalLeaves()
-			{
-				return totalLeaves(root);
-			}
-			
-			/**
-			 * height()
-			 * finds the height of the tree
-			 * @return h, the height
-			 */
-			public int height()
-			{
-				return height(root);
-			}
-			
-			private int height(Node<T> t)
-			{
-				if(t==null)
-				{
-					return 0;
-				}
-				else
-				{
-					return 1 + Math.max(height(t.left), height(t.right));
-				}
-			}
-			
-		}
-
+		} // end BST
+		
+		//build the tree
+		//....
 		return person;
 	}
+	
+	
 
-	public static int hash(Person p) {
-		int code;
-		return code;
-	}
+	
 
 }
