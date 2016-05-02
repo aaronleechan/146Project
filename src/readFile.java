@@ -12,10 +12,10 @@ public class readFile {
 	
 	public void readFile(){
 		
-//		for(int i = 0; i < storeAllList.size(); i++)
-//		{
-//			System.out.println(storeAllList.get(i));
-//		}
+		for(int i = 0; i < storeAllList.size(); i++)
+		{
+			System.out.println(storeAllList.get(i));
+		}
 		
 		
 		
