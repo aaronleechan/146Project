@@ -29,10 +29,7 @@ public class filePresenter {
 			e.printStackTrace();
 		}	  
 		
-		
-		
-		
-		
+		fileReader.readFile();
 	}
 	
 	
