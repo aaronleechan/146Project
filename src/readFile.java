@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class readFile {
 
@@ -14,7 +15,7 @@ public class readFile {
 	}
 
 	public void readFile() {
-
+	
 	}
 
 	public int hash(Person p) {
