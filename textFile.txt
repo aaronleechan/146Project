@@ -20,7 +20,7 @@ Tina		Palmer		161	60	19	F	66
 Benny		French		123	61	25	F	75
 Erika		Montgomery	220	58	22	F	82
 Constance	Nelson		110	61	18	F	84
-Kerry					224	63	20	F	87
+Kerry		Park		224	63	20	F	87
 Jon			Graves		103	57	28	F	100
 Chris		Hanson		203	59	24	M	71
 Charles		Rodriguez	131	52	18	M	93

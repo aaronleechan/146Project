@@ -11,8 +11,6 @@ public class filePresenter {
 		fileReader = new readFile();
 		fileReader.read();
 		
-		
-		
 		fileReader.readFile();
 	}
 	
