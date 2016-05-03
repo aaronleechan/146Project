@@ -13,24 +13,24 @@ public class readFile {
 		// TODO Auto-generated method stub
 	}
 
-	public void readFile() {
+	public void readFile() 
+	{
 
 	}
 
 	public int hash(Person p) {
 		// hashcode formula!
-		int code = (p.getName().length() 
-					+ p.getAge() + p.getHrt() 
-					+ p.getHt() + p.getWt()) % 50;
-		//linear probe!
-		while(people[code] != null){
+		int code = (p.getName().length() + p.getAge() + p.getHrt() + p.getHt() + p
+				.getWt()) % 50;
+		// linear probe!
+		while (people[code] != null) {
 			code += 1;
 		}
-		//add to people array at hashcode.
+		// add to people array at hashcode.
 		people[code] = p;
-		//set ID of person
+		// set ID of person
 		p.setID(code);
-		
+
 		return code;
 	}
 }
