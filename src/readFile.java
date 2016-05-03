@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class readFile {
 
 	
-	ArrayList<String> storeAllList = new ArrayList<String>();
+	public ArrayList<String> storeAllList = new ArrayList<String>();
 	//Only to read a file
 	
 	public void read() {
@@ -29,8 +29,6 @@ public class readFile {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}	  
-		
-		
 		// TODO Auto-generated method stub	
 	}
 	
