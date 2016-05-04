@@ -44,4 +44,8 @@ public class Person {
 		this.ID = ID;
 	}
 	
+	public String toString(){
+		return name + " " + age + " " + wt + " " + ht + " " + hrt;
+	}
+	
 }

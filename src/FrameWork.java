@@ -79,16 +79,12 @@ public class FrameWork extends JFrame{
 		resultField.add(resultName);
 		resultField.setBorder(BorderFactory.createRaisedBevelBorder());
 		
-		result = presenter.firstFileList;
+		result = presenter.resultFieldList;
 		
 		for(int i = 0; i < result.size(); i++)
 		{
 			resultField.add(new JTextArea(result.get(i)));
 		}
-		
-
-		
-		
 		
 		buttonKeys.add(quickSortButton);
 		buttonKeys.add(heapSortButton);
