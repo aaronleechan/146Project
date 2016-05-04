@@ -2,11 +2,14 @@
 //import BST.Node;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import BST.Node;
 
 >>>>>>> parent of b34ddd3... adding mergeSort and heapSort
 =======
+=======
+>>>>>>> parent of 704616f... Deleting the comments in allMethods
 //
 //public class allMethods {
 //
@@ -248,6 +251,9 @@ import BST.Node;
 //	
 //
 //}
+=======
+<<<<<<< HEAD
+>>>>>>> parent of 704616f... Deleting the comments in allMethods
 =======
 >>>>>>> parent of 704616f... Deleting the comments in allMethods
 public class allMethods {
