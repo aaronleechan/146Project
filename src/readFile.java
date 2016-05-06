@@ -23,8 +23,6 @@ public class readFile {
 					while(in.hasNextLine())
 					{
 						String line = in.nextLine();
-						storeAllList.add(line);
-						
 						Scanner wd = new Scanner(line);
 						while(wd.hasNext())
 						{
@@ -40,14 +38,15 @@ public class readFile {
 							Person p = new Person(name, age, wt, ht, gender, hrt);
 							hash(p); //person added to people array
 						}
-					}					
+						wd.close();
+					}
+					in.close();
 				} catch (FileNotFoundException e) {
 				
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}	  
-		
-		
+		storeAllList.clear();
 		// TODO Auto-generated method stub	
 	}
 	
@@ -89,12 +88,17 @@ public class readFile {
 		}
 		people[code] = p;
 		p.setID(code);
+		storeAllList.add(p.toString());
 		count++;
 
 		//for testing. prints each Person.
 //		for(Person ppl : people)
 //		{
-//			System.out.println(ppl);
+//			System.out.println("people: " + ppl);
+//		}
+//		for(String peeps : storeAllList)
+//		{
+//			System.out.println("AllList: " + peeps);
 //		}
 		return code;
 	}

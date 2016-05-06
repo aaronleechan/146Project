@@ -1,23 +1,24 @@
+import java.util.Comparator;
 
-public class BST {
+public class BST implements Comparator<String> {
 	
 	public BST(){
 		root = null;
 	}
 	
 	//generic node class
-	class Node<T> {
+	class Node{
 		String ele;
-		Node<T> left;
-		Node<T> right;
+		Node left;
+		Node right;
 
 		// inner class constructor
-		Node(T element){
+		Node(String element){
 			this(element, null, null);
 		}
 
 		// inner class constructor
-		Node(String element, Node<T> lt, Node<T> rt){
+		Node(String element, Node lt, Node rt){
 			ele = element;
 			left = lt;
 			right = rt;
@@ -37,200 +38,66 @@ public class BST {
 	}
 	
 	private boolean contains(String x, Node t){
-		if(t == null){
+		if(t == null)
 			return false;
-		}
-		boolean comparison = x.equals(t.ele);
 		
-		if(comparison) //if x < t.ele
-		{
+		int comparison = compare(x, t.ele);
+		
+		if(comparison < 0)
 			return contains(x, t.left);
-		}
-		else if(comparison > 0){
+		else if(comparison > 0)
 			return contains(x, t.right);
-		}
-		else{
+		else
 			return true;
-		}
 	}
-	
-	
+
+	public int compare(String x, String anotherString){
+		int i=0; int j=0;
+		while(i < x.length() && j < anotherString.length()){
+			if(x.charAt(i) < anotherString.charAt(j))
+				return -1;
+			else if(x.charAt(i) > anotherString.charAt(j))
+				return 1;
+			i++; j++;
+		}
+		if(x.length() < anotherString.length()) //if x shorter than aStr
+			return -1;
+		else if(x.length() > anotherString.length())
+			return 1;
+		return 0;
+	}
 	
 	//instantiate root, count
 	private Node root;
 	
+	//insert method
+	public void insert(String x)
+	{
+		root = insert(x, root);
+	}
 	
-	
+	private Node insert(String x, Node t)
+	{
+		if(t == null)
+		{
+			return new Node(x, null, null);
+		}
+		
+		int comparison = compare(x, t.ele);
+		
+		if(comparison < 0)
+		{
+			t.left = insert(x, t.left);
+		}
+		else if(comparison > 0)
+		{
+			t.right = insert(x, t.right);
+		}
+		else
+		{
+			;
+		}
+		
+		return t;
+	}
 }
-
-
-//finds person by name
-//		public static Person searchName(Person[] ppl) {
-//			Person[] temp = ppl.clone();
-//			
-//			
-//			
-//			class BST<T extends Comparable <? super T>> {
-//				
-//				
-//				
-//				//constructor
-//				
-//				
-//				//retrieves root
-//					
-//				
-//				//isEmpty method
-//			
-//				
-//				//contains method
-//			
-//				
-//				
-//				
-//				//findMin method
-//				public T findMin() throws Exception
-//				{
-//					if(isEmpty())
-//					{
-//						throw new Exception();
-//					}
-//					else
-//					{
-//						return findMin(root).ele;
-//					}
-//				}
-//
-//				private Node<T> findMin(Node<T> t)
-//				{
-//					if(t != null)
-//					{
-//						while(t.left != null)
-//						{
-//							t = t.left;
-//						}
-//					}
-//					
-//					return t;
-//				}
-//				
-//				//findMax method
-//					public T findMax() throws Exception
-//					{
-//						if(isEmpty())
-//						{
-//							throw new Exception();
-//						}
-//						else
-//						{
-//							return findMax(root).ele;
-//						}
-//					}
-//
-//					private Node<T> findMax(Node<T> t)
-//					{
-//						if(t != null)
-//						{
-//							while(t.right != null)
-//							{
-//								t = t.right;
-//							}
-//						}
-//						
-//						return t;
-//					}
-//				
-//				//insert method
-//				public void insert(T x)
-//				{
-//					root = insert(x, root);
-//				}
-//				
-//				private Node<T> insert(T x, Node<T> t)
-//				{
-//					if(t == null)
-//					{
-//						return new Node<>(x, null, null);
-//					}
-//					
-//					int comparison = x.compareTo(t.ele);
-//					
-//					if(comparison < 0)
-//					{
-//						t.left = insert(x, t.left);
-//					}
-//					else if(comparison > 0)
-//					{
-//						t.right = insert(x, t.right);
-//					}
-//					else
-//					{
-//						;
-//					}
-//					
-//					return t;
-//				}
-//				
-//				//remove method
-//				public void remove(T x)
-//				{
-//					root = remove(x, root);
-//				}
-//				
-//				private Node<T> remove(T x, Node<T> t)
-//				{
-//					if(t == null)
-//					{
-//						return t;
-//					}
-//					
-//					int comparison = x.compareTo(t.ele);
-//					
-//					if(comparison < 0)
-//					{
-//						t.left = remove(x, t.left);
-//					}
-//					else if(comparison > 0)
-//					{
-//						t.right = remove(x, t.right);
-//					}
-//					else if(t.left !=null && t.right != null) //if match and has two children
-//					{
-//						t.ele = findMin(t.right).ele;
-//						t.right = remove(t.ele, t.right);
-//					}
-//					else //match and has at most 1 child
-//					{
-//						t = (t.left != null) ? t.left : t.right;
-//					}
-//					
-//					return t;
-//				}
-//				
-//				/**
-//				 * size()
-//				 * finds the number of Nodes in the tree
-//				 */
-//				public int size()
-//				{
-//					return size(root);
-//				}
-//				
-//				private int size(Node<T> t)
-//				{
-//					if(t == null)
-//					{
-//						return 0;
-//					}
-//					else
-//					{
-//						return 1 + size(t.left) + size(t.right);
-//					}
-//				}
-//					
-//			} // end BST
-//			
-//			//build the tree
-//			//....
-//			//return person;
-//		}
