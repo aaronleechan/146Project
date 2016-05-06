@@ -1,4 +1,3 @@
-//import BST.Node;
 public class allMethods {
 
 	// quicksorts the heights

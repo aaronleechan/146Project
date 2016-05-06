@@ -58,24 +58,11 @@ public class readFile {
 			System.out.println(storeAllList.get(i));
 		}
 	}
-		
-		
-<<<<<<< HEAD
-		
-
-<<<<<<< HEAD
-	public void readFile() 
-	{
-=======
->>>>>>> d94b62843f3deead7f323128faa23192e7f1d4ca
-=======
->>>>>>> d98f856b125743ba1d05aab6b5f0d33334055e6c
 
 	// ArrayList<String> storeAllList = new ArrayList<String>(); //want a full
 	// array
 	// Only to read a file
 
-<<<<<<< HEAD
 	public int hash(Person p) {
 		// hashcode formula!
 		
@@ -99,7 +86,7 @@ public class readFile {
 				code = 0;
 			else
 				code++;
-=======
+
 	Person[] people;
 
 	public void read(String s) {
@@ -107,7 +94,8 @@ public class readFile {
 		// TODO Auto-generated method stub
 	}
 
-	public void readFile() {
+	public void readFile() 
+	{
 
 	}
 
@@ -121,13 +109,30 @@ public class readFile {
 			code += 1;
 
 		}
-		//add to people array at hashcode.
 		people[code] = p;
-		//set ID of person
 		p.setID(code);
-
 		count++;
 		return code;
 	}
+	
+
+
+//	public int hash(Person p) {
+//		// hashcode formula!
+//		int code = (p.getName().length() 
+//					+ p.getAge() + p.getHrt() 
+//					+ p.getHt() + p.getWt()) % 50;
+//		//linear probe!
+//		while(people[code] != null){
+//			code += 1;
+//		}
+//		//add to people array at hashcode.
+//		people[code] = p;
+//		//set ID of person
+//		p.setID(code);
+//		count++;
+//		
+//		return code;
+//	}
 	
 }

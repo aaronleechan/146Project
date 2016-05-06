@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-public class FrameWork {
-=======
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-
 public class FrameWork extends JFrame{
->>>>>>> d94b62843f3deead7f323128faa23192e7f1d4ca
 	filePresenter presenter;
 
 	public FrameWork(filePresenter filePresenter) {
