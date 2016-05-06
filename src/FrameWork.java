@@ -3,8 +3,12 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
+<<<<<<< HEAD
 
 public class FrameWork extends JFrame{
+=======
+public class FrameWork extends JFrame {
+>>>>>>> 515da633d59a9902d0c9644f6027039d146695d6
 	filePresenter presenter;
 	
 	ArrayList<String> result = new ArrayList<String>();
@@ -16,53 +20,52 @@ public class FrameWork extends JFrame{
 		this.presenter = filePresenter;
 		presenter.attachView(this);
 		showGUI();
-		
+
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-	
-	private void showGUI(){
+
+	private void showGUI() {
 		presenter.loadfileReader();
-		
+
 		JFrame theFrame = new JFrame("FrameWork");
 		theFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		theFrame.setLayout(new BorderLayout());
-		
+
 		JPanel buttonKeys = new JPanel(new FlowLayout());
 		buttonKeys.add(new JLabel());
-		
+
 		JButton quickSortButton = new JButton("Sort height");
-		quickSortButton.addActionListener(new ActionListener(){
+		quickSortButton.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				
+
 			}
 		});
-		
+
 		JButton heapSortButton = new JButton("heap Sort");
-		heapSortButton.addActionListener(new ActionListener(){
+		heapSortButton.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				
+
 			}
-			
+
 		});
-		
+
 		JButton mergeSortButton = new JButton("merge Sort");
-		mergeSortButton.addActionListener(new ActionListener(){
+		mergeSortButton.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				
+
 			}
-			
+
 		});
+<<<<<<< HEAD
 		
 		JTextField searchBar = new JTextField("Enter Name", 10);
 		JButton searchButton = new JButton("Search");
@@ -115,11 +118,18 @@ public class FrameWork extends JFrame{
 		
 		theFrame.add(resultField);
 		
+=======
+
+		buttonKeys.add(quickSortButton);
+		buttonKeys.add(heapSortButton);
+		buttonKeys.add(mergeSortButton);
+
+>>>>>>> 515da633d59a9902d0c9644f6027039d146695d6
 		theFrame.add(buttonKeys, BorderLayout.NORTH);
 		theFrame.add(resultField,BorderLayout.CENTER);
 		theFrame.setSize(800, 900);
 		theFrame.setVisible(true);
-			
+
 	}
 
 }

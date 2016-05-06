@@ -1,6 +1,5 @@
-
 public class Person {
-	
+
 	private int ID;
 	private String name;
 	private int ht;
@@ -8,44 +7,43 @@ public class Person {
 	private int age;
 	private int hrt;
 	private String gender;
-	
-	public Person(String name, int age, int wt, int ht, String gender, int hrt)
-	{
+
+	public Person(String name, int age, int wt, int ht, String gender, int hrt) {
 		this.name = name;
 		this.age = age;
 		this.wt = wt;
 		this.ht = ht;
 		this.gender = gender;
 		this.hrt = hrt;
-		
+
 	}
-	
-	public int getAge(){
+
+	public int getAge() {
 		return this.age;
 	}
-	
-	public int getWt(){
+
+	public int getWt() {
 		return this.wt;
 	}
-	
-	public int getHt(){
+
+	public int getHt() {
 		return this.ht;
 	}
-	
-	public int getHrt(){
+
+	public int getHrt() {
 		return this.hrt;
 	}
-	
-	public String getName(){
+
+	public String getName() {
 		return this.name;
 	}
-	
-	public void setID(int ID){
+
+	public void setID(int ID) {
 		this.ID = ID;
 	}
-	
+
 	public String toString(){
-		return name + " " + age + " " + wt + " " + ht + " " + hrt;
+		return ID + " " + name + " " + age + " " + gender + " " + wt + " " + ht + " " + hrt;
 	}
-	
+
 }

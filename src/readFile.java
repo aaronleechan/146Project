@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class readFile {
-		
-	private Person[] people = new Person[10];
-	private int count = 0;
 	
 	public ArrayList<String> storeAllList = new ArrayList<String>();
 	//Only to read a file
@@ -37,15 +34,35 @@ public class readFile {
 							String gender = wd.next();
 							int hrt = wd.nextInt();
 							
+<<<<<<< HEAD
 //							Person p = new Person(name, age, wt, ht, gender, hrt);
 //							hash(p); //person added to people array
+=======
+							Person p = new Person(name, age, wt, ht, gender, hrt);
+							Hashing.hash(p); //person added to people array
+							
+>>>>>>> 515da633d59a9902d0c9644f6027039d146695d6
 						}
-					}					
+						
+						
+					}	
+					
+					//for testing. prints each Person.
+					for(Person ppl : Hashing.people)
+					{
+						System.out.println(ppl);
+					}
+		
+					for(Person person: Hashing.people){
+						if(person != null) storeAllList.add(person.toString());
+					}
+					
 				} catch (FileNotFoundException e) {
 				
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}	  
+<<<<<<< HEAD
 		// TODO Auto-generated method stub	
 	}
 	
@@ -108,5 +125,27 @@ public class readFile {
 //
 //		return code;
 //	}
+=======
+		
+		
+		
+	}
+	
+	public void readFile(){
+		
+		for(int i = 0; i < storeAllList.size(); i++)
+		{
+			System.out.println(storeAllList.get(i));
+		}
+	}
+
+	// ArrayList<String> storeAllList = new ArrayList<String>(); //want a full
+	// array
+	// Only to read a file
+
+>>>>>>> 515da633d59a9902d0c9644f6027039d146695d6
 	
 }
+	
+
+
