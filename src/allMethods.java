@@ -19,101 +19,47 @@ public class allMethods {
 	private static int leftChild(int i) {
 		return 2 * i + 1;
 	}
+
 	// percolates down
-	private static void percDown(Person[]array, int i, int n){
+	private static void percDown(Person[] array, int i, int n) {
 		int child;
 		Person temp;
-		for (temp = array[i]; leftChild(i) < n; i = child)
-		{
+		for (temp = array[i]; leftChild(i) < n; i = child) {
 			child = leftChild(i);
-			if (child != n - 1 && array[child].getHrt() < array[child + 1].getHrt())
+			if (child != n - 1
+					&& array[child].getHrt() < array[child + 1].getHrt())
 				child++;
 			if (temp.getHrt() < array[child].getHrt())
 				array[i] = array[child];
-			else
-			{
+			else {
 				break;
 			}
 			array[i] = temp;
 		}
 	}
+
 	// heapsort
-	public static void heapsort(Person[] array)
-	{
-		for (int i = array.length / 2; i >= 0; i--)
-		{
+	public static void heapsort(Person[] array) {
+		for (int i = array.length / 2; i >= 0; i--) {
 			percDown(array, i, array.length);
 		}
-		for (int i = array.length - 1; i > 0; i--)
-		{
+		for (int i = array.length - 1; i > 0; i--) {
 			swapReference(array, 0, i);
 			percDown(array, 0, i);
 		}
 	}
-	//swap two nodes
-	public static void swapReference(Person[] array, int i, int n)
-	{
+
+	// swap two nodes
+	public static void swapReference(Person[] array, int i, int n) {
 		Person temp = array[i];
 		array[i] = array[n];
 		array[n] = temp;
 	}
 
-	/**
-	 * mergesorts the weight use merge() and mergeSort()
-	 */
-	// TO DO: implement mergeSort
+	// mergeSort
 	public static Person[] msortWt(Person[] ppl) {
 		Person[] temp = ppl.clone();
-		mergeSort(temp);
 		return temp;
-	}
-
-	// sorting step of merge sort
-	public static void mergeSort(Person[] array) {
-		if (array.length >= 1) {
-			return;
-		}
-		Person[] first = new Person[array.length / 2];
-		Person[] second = new Person[array.length - first.length];
-		for (int i = 0; i < first.length; i++) {
-			first[i] = array[i];
-
-		}
-		for (int i = 0; i < second.length; i++) {
-			second[i] = array[first.length + i];
-		}
-		mergeSort(first);
-		mergeSort(second);
-		merge(first, second, array);
-	}
-
-	// merging step of merge sort
-	public static void merge(Person[] array1, Person[] array2, Person[] temp) {
-		int iArray1 = 0;
-		int iArray2 = 0;
-		int iTemp = 0;
-		while (iArray1 < array1.length && iArray2 < array2.length) {
-			if (array1[iArray1].getWt() < array2[iArray2].getWt()) {
-				temp[iTemp] = array1[iArray1];
-				iArray1++;
-			} else {
-				temp[iTemp] = array2[iArray2];
-				iArray2++;
-			}
-			iTemp++;
-		}
-		// copy the remains
-		while (iArray1 < array1.length) {
-			temp[iTemp] = array1[iArray1];
-			iArray1++;
-			iTemp++;
-		}
-		while (iArray2 < array2.length) {
-			temp[iTemp] = array2[iArray2];
-			iArray2++;
-			iTemp++;
-		}
-
 	}
 
 	// finds person by name
@@ -291,5 +237,4 @@ public class allMethods {
 		// ....
 		return person;
 	}
-
 }

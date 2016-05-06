@@ -86,28 +86,6 @@ public class readFile {
 				code = 0;
 			else
 				code++;
-
-	Person[] people;
-
-	public void read(String s) {
-		storeAllList.add(s);
-		// TODO Auto-generated method stub
-	}
-
-	public void readFile() 
-	{
-
-	}
-
-	public int hash(Person p) {
-		// hashcode formula!
-		int code = (p.getName().length() 
-					+ p.getAge() + p.getHrt() 
-					+ p.getHt() + p.getWt()) % 50;
-		//linear probe!
-		while(people[code] != null){
-			code += 1;
-
 		}
 		people[code] = p;
 		p.setID(code);
