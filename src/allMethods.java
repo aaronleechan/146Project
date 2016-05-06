@@ -6,9 +6,7 @@ public class allMethods {
 		return temp;
 	}
 
-	/**
-	 * heapsorts the heart rates
-	 */
+	// heapsorts the heart rates
 	public static Person[] hsortHr(Person[] ppl) {
 		Person[] temp = ppl.clone();
 		return temp;
