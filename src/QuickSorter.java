@@ -1,9 +1,16 @@
+import java.util.ArrayList;
+
 // Quicksorting by the heights
 public class QuickSorter {
 
 	// change Comparable[] to Person[]
-	public static void quicksort(Person[] a) {
-		quicksort(a, 0, a.length - 1);
+	public  ArrayList<String> quicksort(Person[] a) {
+		Person[] result = a.clone();
+		quicksort(result, 0, result.length - 1);
+		
+		ArrayList<String> ResultList = new ArrayList<>();
+		for(Person p: result) ResultList.add(p.toString());
+		return ResultList;
 	}
 	private static final int CUTOFF = 10;
 	

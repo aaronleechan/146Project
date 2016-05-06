@@ -1,7 +1,22 @@
 //Mergesorting weights
+import java.util.*;
 public class MergeSorter {
+	public ArrayList<String> mergeSort(Person[] orArray)
+	{
+		Person[] clone = orArray.clone();
+		sort(clone);
+		ArrayList<Person> clone2 = new ArrayList<Person>(Arrays.asList(clone));
+		ArrayList<String> strings = new ArrayList<String>();
+		for (Person p: clone2)
+		{
+			String person = p.toString();
+			strings.add(person);
+		}
+		return strings;
+	}
+	
 	// sorting step of merge sort
-	public static void mergeSort(Person[] array) {
+	public static void sort(Person[] array) {
 		if (array.length <= 1) {
 			return;
 		}
@@ -13,8 +28,8 @@ public class MergeSorter {
 		for (int i = 0; i < second.length; i++) {
 			second[i] = array[first.length + i];
 		}
-		mergeSort(first);
-		mergeSort(second);
+		sort(first);
+		sort(second);
 		merge(first, second, array);
 	}
 

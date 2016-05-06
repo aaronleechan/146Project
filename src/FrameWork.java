@@ -94,6 +94,7 @@ public class FrameWork extends JFrame {
 			
 			titleField.add(new JLabel(title[i]));
 		}
+		
 		System.out.println(row);
 		System.out.println(column);
 		
@@ -114,8 +115,6 @@ public class FrameWork extends JFrame {
 			resultField.add(new JLabel(resultValue.get(i)));
 		}
 		
-		
-		//titleField.add(table,BorderLayout.CENTER);	
 		
 		buttonKeys.add(quickSortButton);
 		buttonKeys.add(heapSortButton);

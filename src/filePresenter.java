@@ -6,23 +6,21 @@ import java.util.Scanner;
 public class filePresenter {
 	FrameWork view;
 	readFile fileReader;
+	QuickSorter quickSortResult;
+	MergeSorter mergeSortResult;
+	
+	
+	
 	public ArrayList<String> firstFileList = new ArrayList<String>();
 	public ArrayList<String> resultFieldList = new ArrayList<String>();
 	//This is the class that will handle the model <-> UI communication
 	void loadfileReader()
 	{
 		fileReader = new readFile();
-		fileReader.read();
-		
-//		fileReader.readFile();		
+		fileReader.read();	
 		
 		firstFileList = fileReader.storeAllList;
 		
-//		for(int i = 0; i < firstFileList.size(); i++)
-//		{
-////			resultFieldList.add(firstFileList.get(i));
-//			System.out.println(firstFileList.get(i));
-//		}
 	}
 	
 	void attachView(FrameWork view) {
