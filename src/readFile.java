@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class readFile {
 		
-	private Person[] people = new Person[10];
+	public Person[] people = new Person[10];
 	private int count = 0;
 	
 	ArrayList<String> storeAllList = new ArrayList<String>();
@@ -90,27 +90,15 @@ public class readFile {
 		people[code] = p;
 		p.setID(code);
 		count++;
+
+		//for testing. prints each Person.
+//		for(Person ppl : people)
+//		{
+//			System.out.println(ppl);
+//		}
 		return code;
 	}
-	
-
-
-//	public int hash(Person p) {
-//		// hashcode formula!
-//		int code = (p.getName().length() 
-//					+ p.getAge() + p.getHrt() 
-//					+ p.getHt() + p.getWt()) % 50;
-//		//linear probe!
-//		while(people[code] != null){
-//			code += 1;
-//		}
-//		//add to people array at hashcode.
-//		people[code] = p;
-//		//set ID of person
-//		p.setID(code);
-//		count++;
-//		
-//		return code;
-//	}
-	
 }
+	
+
+

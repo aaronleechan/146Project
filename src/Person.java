@@ -42,8 +42,8 @@ public class Person {
 		this.ID = ID;
 	}
 
-	public String toString() {
-		return name + " " + age + " " + wt + " " + ht + " " + hrt;
+	public String toString(){
+		return ID + " " + name + " " + age + " " + gender + " " + wt + " " + ht + " " + hrt;
 	}
 
 }
