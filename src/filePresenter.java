@@ -12,7 +12,10 @@ public class filePresenter {
 	
 	
 	public ArrayList<String> firstFileList = new ArrayList<String>();
-	public ArrayList<String> resultFieldList = new ArrayList<String>();
+	public ArrayList<String> mergeSortList = new ArrayList<String>();
+	public ArrayList<String> quickSortList = new ArrayList<String>();
+
+	
 	//This is the class that will handle the model <-> UI communication
 	void loadfileReader()
 	{
@@ -20,6 +23,10 @@ public class filePresenter {
 		fileReader.read();	
 		
 		firstFileList = fileReader.storeAllList;
+		
+//		mergeSortResult = new 
+//		mergeSortList = mergeSortResult.mergeSort;
+//		quickSortList = 
 		
 	}
 	

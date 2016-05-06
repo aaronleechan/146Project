@@ -22,6 +22,7 @@ public class readFile {
 					{
 						String line = in.nextLine();
 
+
 						//storeAllList.add(line);
 						
 
@@ -43,22 +44,16 @@ public class readFile {
 
 						}
 
+
 						wd.close();
 					}
 					in.close();
 
-					
-					//for testing. prints each Person.
-//					for(Person ppl : Hashing.people)
-//					{
-//						System.out.println(ppl);
-//					}
 
 					for(Person person: Hashing.people){
 						if(person != null) storeAllList.add(person.toString());
 					}
 				
-					
 
 				} catch (FileNotFoundException e) {
 				
@@ -73,53 +68,13 @@ public class readFile {
 	}
 	
 	
-//	public void readFile(){
-//		
-//		for(int i = 0; i < storeAllList.size(); i++)
-//		{
-//			System.out.println(storeAllList.get(i));
-//	}
-//	}
-
-	public int hash(Person p) {
-		// hashcode formula!
+	public void readFile(){
 		
-		if(count == people.length){
-			Person[] P_Resize = new Person[people.length*2]; 
-			
-			for(int i=0; i<people.length; i++)
-			{
-				P_Resize[i] = people[i];
-			}
-			
-			people = P_Resize;
+		for(int i = 0; i < storeAllList.size(); i++)
+		{
+			System.out.println(storeAllList.get(i));
 		}
-		
-		int code = (p.getName().length() 
-					+ p.getAge() + p.getHrt() 
-					+ p.getHt() + p.getWt()) % people.length;
-		//linear probe!
-		while(people[code] != null){
-			if(code == people.length-1)
-				code = 0;
-			else
-				code++;
-		}
-		people[code] = p;
-		p.setID(code);
-		storeAllList.add(p.toString());
-		count++;
 
-		//for testing. prints each Person.
-//		for(Person ppl : people)
-//		{
-//			System.out.println("people: " + ppl);
-//		}
-//		for(String peeps : storeAllList)
-//		{
-//			System.out.println("AllList: " + peeps);
-//		}
-		return code;
 	}
 
 }
