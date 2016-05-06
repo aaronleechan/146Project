@@ -20,7 +20,7 @@ public class readFile {
 					while(in.hasNextLine())
 					{
 						String line = in.nextLine();
-						storeAllList.add(line);
+						//storeAllList.add(line);
 						
 						Scanner wd = new Scanner(line);
 						while(wd.hasNext())
@@ -48,10 +48,10 @@ public class readFile {
 					}	
 					
 					//for testing. prints each Person.
-					for(Person ppl : Hashing.people)
-					{
-						System.out.println(ppl);
-					}
+//					for(Person ppl : Hashing.people)
+//					{
+//						System.out.println(ppl);
+//					}
 		
 					for(Person person: Hashing.people){
 						if(person != null) storeAllList.add(person.toString());
@@ -59,7 +59,6 @@ public class readFile {
 					
 				} catch (FileNotFoundException e) {
 				
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}	  
 <<<<<<< HEAD
