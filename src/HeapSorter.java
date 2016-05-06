@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 // Heapsorting heart rates
 public class HeapSorter {
 	// returns the left child
@@ -19,11 +22,26 @@ public class HeapSorter {
 					break;
 				}
 				array[i] = temp;
+				System.out.println(Arrays.toString(array));
 			}
 		}
+		
+//		public static ArrayList<String> heapSort(Person[] orArray)
+//		{
+//			Person[] clone = orArray.clone();
+//			sort(clone);
+//			ArrayList<Person> clone2 = new ArrayList<Person>(Arrays.asList(clone));
+//			ArrayList<String> strings = new ArrayList<String>();
+//			for (Person p: clone2)
+//			{
+//				String person = p.toString();
+//				strings.add(person);
+//			}
+//			return strings;
+//		}
 
 		// heapsort
-		public static void heapsort(Person[] array) {
+		public static void sort(Person[] array) {
 			for (int i = array.length / 2; i >= 0; i--) {
 				percDown(array, i, array.length);
 			}
