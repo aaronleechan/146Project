@@ -1,5 +1,4 @@
 //import BST.Node;
-<<<<<<< HEAD
 public class allMethods {
 
 	// quicksorts the heights
@@ -295,4 +294,3 @@ public class allMethods {
 	}
 
 }
->>>>>>> mergeSort

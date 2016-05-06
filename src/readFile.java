@@ -119,22 +119,14 @@ public class readFile {
 		//linear probe!
 		while(people[code] != null){
 			code += 1;
->>>>>>> mergeSort
+
 		}
 		//add to people array at hashcode.
 		people[code] = p;
 		//set ID of person
 		p.setID(code);
-<<<<<<< HEAD
-<<<<<<< HEAD
-		count++;
-		
-=======
 
->>>>>>> mergeSort
-=======
-		
->>>>>>> parent of b34ddd3... adding mergeSort and heapSort
+		count++;
 		return code;
 	}
 	
