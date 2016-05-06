@@ -58,8 +58,6 @@ public class readFile {
 			System.out.println(storeAllList.get(i));
 		}
 	}
-		
-		
 
 	// ArrayList<String> storeAllList = new ArrayList<String>(); //want a full
 	// array
@@ -89,11 +87,10 @@ public class readFile {
 			else
 				code++;
 		}
-		//add to people array at hashcode.
 		people[code] = p;
-		//set ID of person
 		p.setID(code);
 		count++;
+
 		//for testing. prints each Person.
 //		for(Person ppl : people)
 //		{
@@ -102,3 +99,6 @@ public class readFile {
 		return code;
 	}
 }
+	
+
+
