@@ -29,6 +29,7 @@ public class filePresenter {
 //				//resultFieldList.add(sS);
 //			}
 			resultFieldList.add(firstFileList.get(i));
+			//System.out.println(firstFileList.get(i) + " hh");
 			
 		}
 	}

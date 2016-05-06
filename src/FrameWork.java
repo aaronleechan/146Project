@@ -8,6 +8,9 @@ public class FrameWork extends JFrame{
 	filePresenter presenter;
 	
 	ArrayList<String> result = new ArrayList<String>();
+	
+	String[][] finalResult;
+	String[] title = { "id ", "First Name", "Last Name", "age" , "gender" + "weight" + "height" + "heart rate"}; 
 
 	public FrameWork(filePresenter filePresenter) {
 		this.presenter = filePresenter;
@@ -71,20 +74,37 @@ public class FrameWork extends JFrame{
 				
 			}
 		});
+		result = presenter.firstFileList;
+		// Get column size
+		int column = title.length;
+		int row = result.size();
+
 		
 		JPanel resultField = new JPanel();
-		resultField.setLayout(new BoxLayout(resultField,BoxLayout.PAGE_AXIS));
+		resultField.setLayout(new FlowLayout());
 		JLabel resultName = new JLabel("Result");
-		resultName.setAlignmentX(CENTER_ALIGNMENT);
-		resultField.add(resultName);
-		resultField.setBorder(BorderFactory.createRaisedBevelBorder());
+		JTable table = new JTable(row+1, column);
+		table.setSize(new Dimension(400,400));
+		System.out.println(row);
+		System.out.println(column);
 		
-		result = presenter.resultFieldList;
+		finalResult = new String[row][column];
 		
-		for(int i = 0; i < result.size(); i++)
-		{
-			resultField.add(new JTextArea(result.get(i)));
-		}
+		
+		resultField.add(table,BorderLayout.CENTER);
+		
+		
+		
+//		resultName.setAlignmentX(CENTER_ALIGNMENT);
+//		resultField.add(resultName);
+//		resultField.setBorder(BorderFactory.createRaisedBevelBorder());
+//		
+//		result = presenter.resultFieldList;
+//		
+//		for(int i = 0; i < result.size(); i++)
+//		{
+//			resultField.add(new JTextArea(result.get(i)));
+//		}
 		
 		buttonKeys.add(quickSortButton);
 		buttonKeys.add(heapSortButton);
@@ -93,6 +113,7 @@ public class FrameWork extends JFrame{
 		buttonKeys.add(searchBar);
 		buttonKeys.add(searchButton);
 		
+		theFrame.add(resultField);
 		
 		theFrame.add(buttonKeys, BorderLayout.NORTH);
 		theFrame.add(resultField,BorderLayout.CENTER);
