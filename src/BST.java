@@ -79,22 +79,15 @@ public class BST implements Comparator<String> {
 	private Node insert(String x, Node t)
 	{
 		if(t == null)
-		{
 			return new Node(x, null, null);
-		}
 		
 		int comparison = compare(x, t.ele);
 		
 		if(comparison < 0)
-		{
 			t.left = insert(x, t.left);
-		}
 		else if(comparison > 0)
-		{
 			t.right = insert(x, t.right);
-		}
-		else
-		{
+		else{
 			;
 		}
 		

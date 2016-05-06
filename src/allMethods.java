@@ -1,38 +1,12 @@
-<<<<<<< HEAD
-//import BST.Node;
-
-=======
->>>>>>> 1b879a4b85da86b7cfcbe92a62525ab12feae700
 public class allMethods {
 
 	// quicksorts the heights
 	public static Person[] qsortHt(Person[] ppl) {
 		Person[] temp = ppl.clone();
-<<<<<<< HEAD
-
 		return temp;
 	}
 
 	// heapsorts the heart rates
-	public static Person[] hsortHr(Person[] ppl) {
-		Person[] temp = ppl.clone();
-
-		return temp;
-	}
-
-	// mergesorts the weights
-	public static Person[] msortWt(Person[] ppl) {
-		Person[] temp = ppl.clone();
-
-		return temp;
-	}
-=======
-		return temp;
-	}
-
-	/**
-	 * heapsorts the heart rates
-	 */
 	public static Person[] hsortHr(Person[] ppl) {
 		Person[] temp = ppl.clone();
 		return temp;
@@ -217,7 +191,6 @@ public class allMethods {
 
 		// build the tree
 		// ....
-		return person;
+		return null;
 	}
->>>>>>> 1b879a4b85da86b7cfcbe92a62525ab12feae700
 }

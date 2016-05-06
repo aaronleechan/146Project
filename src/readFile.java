@@ -4,11 +4,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class readFile {
-		
-	public Person[] people = new Person[10];
-	private int count = 0;
 	
-	ArrayList<String> storeAllList = new ArrayList<String>();
+	public ArrayList<String> storeAllList = new ArrayList<String>();
 	//Only to read a file
 	
 	public void read() {
@@ -23,6 +20,11 @@ public class readFile {
 					while(in.hasNextLine())
 					{
 						String line = in.nextLine();
+<<<<<<< HEAD
+=======
+						//storeAllList.add(line);
+						
+>>>>>>> 4f5f873fd51e350b21a13d98407056dcd9f788d9
 						Scanner wd = new Scanner(line);
 						while(wd.hasNext())
 						{
@@ -36,18 +38,41 @@ public class readFile {
 							int hrt = wd.nextInt();
 							
 							Person p = new Person(name, age, wt, ht, gender, hrt);
-							hash(p); //person added to people array
+							Hashing.hash(p); //person added to people array
+							
 						}
+<<<<<<< HEAD
 						wd.close();
 					}
 					in.close();
+=======
+						
+						
+					}	
+					
+					//for testing. prints each Person.
+//					for(Person ppl : Hashing.people)
+//					{
+//						System.out.println(ppl);
+//					}
+		
+					for(Person person: Hashing.people){
+						if(person != null) storeAllList.add(person.toString());
+					}
+					
+>>>>>>> 4f5f873fd51e350b21a13d98407056dcd9f788d9
 				} catch (FileNotFoundException e) {
 				
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}	  
+<<<<<<< HEAD
 		storeAllList.clear();
 		// TODO Auto-generated method stub	
+=======
+		
+		
+		
+>>>>>>> 4f5f873fd51e350b21a13d98407056dcd9f788d9
 	}
 	
 	public void readFile(){
@@ -62,6 +87,7 @@ public class readFile {
 	// array
 	// Only to read a file
 
+<<<<<<< HEAD
 	public int hash(Person p) {
 		// hashcode formula!
 		
@@ -102,6 +128,9 @@ public class readFile {
 //		}
 		return code;
 	}
+=======
+	
+>>>>>>> 4f5f873fd51e350b21a13d98407056dcd9f788d9
 }
 	
 
