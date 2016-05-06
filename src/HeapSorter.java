@@ -1,4 +1,4 @@
-
+// Heapsorting heart rates
 public class HeapSorter {
 	// returns the left child
 	private static int leftChild(int i) {

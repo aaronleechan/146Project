@@ -3,18 +3,18 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
-<<<<<<< HEAD
 
-public class FrameWork extends JFrame{
-=======
+
 public class FrameWork extends JFrame {
->>>>>>> 515da633d59a9902d0c9644f6027039d146695d6
+
 	filePresenter presenter;
 	
 	ArrayList<String> result = new ArrayList<String>();
+	ArrayList<String> resultValue = new ArrayList<String>();
+	JPanel resultField;
+	JPanel resultFieldColumn;
 	
-	String[][] finalResult;
-	String[] title = { "id ", "First Name", "Last Name", "age" , "gender" + "weight" + "height" + "heart rate"}; 
+	String[] title = { "id ", "First Name", "Last Name", "age" , "gender" , "weight" , "height" , "heart rate"}; 
 
 	public FrameWork(filePresenter filePresenter) {
 		this.presenter = filePresenter;
@@ -52,7 +52,6 @@ public class FrameWork extends JFrame {
 				// TODO Auto-generated method stub
 
 			}
-
 		});
 
 		JButton mergeSortButton = new JButton("merge Sort");
@@ -65,7 +64,7 @@ public class FrameWork extends JFrame {
 			}
 
 		});
-<<<<<<< HEAD
+
 		
 		JTextField searchBar = new JTextField("Enter Name", 10);
 		JButton searchButton = new JButton("Search");
@@ -77,37 +76,46 @@ public class FrameWork extends JFrame {
 				
 			}
 		});
+		
+		
 		result = presenter.firstFileList;
+
 		// Get column size
 		int column = title.length;
 		int row = result.size();
 
 		
-		JPanel resultField = new JPanel();
-		resultField.setLayout(new FlowLayout());
-		JLabel resultName = new JLabel("Result");
-		JTable table = new JTable(row+1, column);
-		table.setSize(new Dimension(400,400));
+		JPanel titleField = new JPanel();
+		titleField.setLayout(new GridLayout(0,column));
+		titleField.setSize(100, 100);
+			
+		for(int i = 0; i < title.length; i++)
+		{
+			
+			titleField.add(new JLabel(title[i]));
+		}
 		System.out.println(row);
 		System.out.println(column);
 		
-		finalResult = new String[row][column];
+		resultField = new JPanel();
+		resultField.setLayout(new GridLayout(row,column));
+		
+		for(int i = 0; i < result.size(); i++)
+		{
+			String[] s = result.get(i).split(" ");
+			for(String sS : s)
+			{
+				resultValue.add(sS);
+			}
+		}
+		
+		for(int i = 0; i < resultValue.size(); i++)
+		{
+			resultField.add(new JLabel(resultValue.get(i)));
+		}
 		
 		
-		resultField.add(table,BorderLayout.CENTER);
-		
-		
-		
-//		resultName.setAlignmentX(CENTER_ALIGNMENT);
-//		resultField.add(resultName);
-//		resultField.setBorder(BorderFactory.createRaisedBevelBorder());
-//		
-//		result = presenter.resultFieldList;
-//		
-//		for(int i = 0; i < result.size(); i++)
-//		{
-//			resultField.add(new JTextArea(result.get(i)));
-//		}
+		//titleField.add(table,BorderLayout.CENTER);	
 		
 		buttonKeys.add(quickSortButton);
 		buttonKeys.add(heapSortButton);
@@ -116,17 +124,18 @@ public class FrameWork extends JFrame {
 		buttonKeys.add(searchBar);
 		buttonKeys.add(searchButton);
 		
-		theFrame.add(resultField);
+		theFrame.add(titleField);
 		
-=======
 
 		buttonKeys.add(quickSortButton);
 		buttonKeys.add(heapSortButton);
 		buttonKeys.add(mergeSortButton);
 
->>>>>>> 515da633d59a9902d0c9644f6027039d146695d6
-		theFrame.add(buttonKeys, BorderLayout.NORTH);
-		theFrame.add(resultField,BorderLayout.CENTER);
+
+		theFrame.add(buttonKeys, BorderLayout.SOUTH);
+		
+		theFrame.add(titleField,BorderLayout.NORTH);
+		theFrame.add(resultField, BorderLayout.CENTER);
 		theFrame.setSize(800, 900);
 		theFrame.setVisible(true);
 

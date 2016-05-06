@@ -1,14 +1,14 @@
+//Mergesorting weights
 public class MergeSorter {
 	// sorting step of merge sort
 	public static void mergeSort(Person[] array) {
-		if (array.length >= 1) {
+		if (array.length <= 1) {
 			return;
 		}
 		Person[] first = new Person[array.length / 2];
 		Person[] second = new Person[array.length - first.length];
 		for (int i = 0; i < first.length; i++) {
 			first[i] = array[i];
-
 		}
 		for (int i = 0; i < second.length; i++) {
 			second[i] = array[first.length + i];

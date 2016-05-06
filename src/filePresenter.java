@@ -18,24 +18,12 @@ public class filePresenter {
 		
 		firstFileList = fileReader.storeAllList;
 		
-		for(int i = 0; i < firstFileList.size(); i++)
-		{
-//			String resultString  = "";
-//			String[] splitString = firstFileList.get(i).split("\\s+");
-//			for(String sS : splitString)
-//			{
-//				resultString = resultString + sS + " ";
-//				//System.out.println(sS + " what it is");
-//				//resultFieldList.add(sS);
-//			}
-			resultFieldList.add(firstFileList.get(i));
-			//System.out.println(firstFileList.get(i) + " hh");
-			
-		}
+//		for(int i = 0; i < firstFileList.size(); i++)
+//		{
+////			resultFieldList.add(firstFileList.get(i));
+//			System.out.println(firstFileList.get(i));
+//		}
 	}
-	
-	
-	
 	
 	void attachView(FrameWork view) {
         this.view = view;
