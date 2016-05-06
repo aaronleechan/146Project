@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class readFile {
 		
-	private Person[] people = new Person[10];
+	public Person[] people = new Person[10];
 	private int count = 0;
 	
 	ArrayList<String> storeAllList = new ArrayList<String>();
@@ -94,8 +94,11 @@ public class readFile {
 		//set ID of person
 		p.setID(code);
 		count++;
-		
+		//for testing. prints each Person.
+//		for(Person ppl : people)
+//		{
+//			System.out.println(ppl);
+//		}
 		return code;
 	}
-	
 }
