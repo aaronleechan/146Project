@@ -4,11 +4,11 @@ import java.util.ArrayList;
 public class QuickSorter {
 
 	// change Comparable[] to Person[]
-	public  ArrayList<String> quicksort(Person[] a) {
+	public  static ArrayList<String> quicksort(Person[] a) {
 		Person[] result = a.clone();
 		quicksort(result, 0, result.length - 1);
 		
-		ArrayList<String> ResultList = new ArrayList<>();
+	    ArrayList<String> ResultList = new ArrayList<>();
 		for(Person p: result) ResultList.add(p.toString());
 		return ResultList;
 	}

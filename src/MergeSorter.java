@@ -1,12 +1,15 @@
 //Mergesorting weights
 import java.util.*;
 public class MergeSorter {
-	public ArrayList<String> mergeSort(Person[] orArray)
+	
+		
+	public static ArrayList<String> mergeSort(Person[] orArray)
+
 	{
 		Person[] clone = orArray.clone();
 		sort(clone);
 		ArrayList<Person> clone2 = new ArrayList<Person>(Arrays.asList(clone));
-		ArrayList<String> strings = new ArrayList<String>();
+		ArrayList<String>strings = new ArrayList<String>();
 		for (Person p: clone2)
 		{
 			String person = p.toString();
@@ -61,5 +64,6 @@ public class MergeSorter {
 		}
 
 	}
+	
 
 }

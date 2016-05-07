@@ -12,10 +12,10 @@ public class Tests
 		people[4] = new Person("F", 80, 49, 145, "female", 49);
 		
 		Person[] temp1 = people.clone();
-		HeapSorter.sort(temp1);
-		for (int i = 0; i < temp1.length; i++)
+		ArrayList<String> list1 = MergeSorter.mergeSort(temp1);
+		for (int i = 0; i < list1.size(); i++)
 		{
-			System.out.println(temp1[i].getHrt());
+			System.out.println(list1.get(i));
 		}
 	}
 

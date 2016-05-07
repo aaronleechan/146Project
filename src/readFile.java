@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class readFile {
 	
 	public ArrayList<String> storeAllList = new ArrayList<String>();
+
 	//Only to read a file
 	
 	public void read() {
@@ -54,7 +55,6 @@ public class readFile {
 						if(person != null) storeAllList.add(person.toString());
 					}
 				
-
 				} catch (FileNotFoundException e) {
 				
 					e.printStackTrace();
@@ -63,7 +63,7 @@ public class readFile {
 
 		// TODO Auto-generated method stub	
 
-		storeAllList.clear();
+		//storeAllList.clear();
 		// TODO Auto-generated method stub	
 	}
 	
