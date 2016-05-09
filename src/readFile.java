@@ -24,9 +24,6 @@ public class readFile {
 						String line = in.nextLine();
 
 
-						//storeAllList.add(line);
-						
-
 						Scanner wd = new Scanner(line);
 						while(wd.hasNext())
 						{
@@ -45,26 +42,27 @@ public class readFile {
 
 						}
 
-
 						wd.close();
 					}
-					in.close();
+					in.close();			
+						
 
 
 					for(Person person: Hashing.people){
 						if(person != null) storeAllList.add(person.toString());
 					}
 				
+
 				} catch (FileNotFoundException e) {
 				
 					e.printStackTrace();
 				}	  
 
 
+
+
 		// TODO Auto-generated method stub	
 
-		//storeAllList.clear();
-		// TODO Auto-generated method stub	
 	}
 	
 	
@@ -75,7 +73,9 @@ public class readFile {
 			System.out.println(storeAllList.get(i));
 		}
 
+
 	}
+
 
 }
 	

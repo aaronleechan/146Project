@@ -7,25 +7,25 @@ public class BST implements Comparator<String> {
 	}
 	
 	//generic node class
-	class Node{
-		String ele;
-		Node left;
-		Node right;
+	class Node<Person>{
+		Person ele;
+		Node<Person> left;
+		Node<Person> right;
 
 		// inner class constructor
-		Node(String element){
+		Node(Person element){
 			this(element, null, null);
 		}
 
 		// inner class constructor
-		Node(String element, Node lt, Node rt){
+		Node(Person element, Node<Person> lt, Node<Person> rt){
 			ele = element;
 			left = lt;
 			right = rt;
 		}
 	}
 	
-	public Node root(){
+	public Node<Person> root(){
 		return this.root;
 	}
 	
@@ -33,15 +33,17 @@ public class BST implements Comparator<String> {
 		return root == null;
 	}
 	
-	public boolean contains(String x){
-		return contains(x, root);
+	public boolean contains(Person x){
+		return contains(x.getName(), root);
 	}
-	
-	private boolean contains(String x, Node t){
+	/*
+	 * contains method returns true when Person's name exists in tree
+	 */
+	private boolean contains(String x, Node<Person> t){
 		if(t == null)
 			return false;
-		
-		int comparison = compare(x, t.ele);
+		//compares x name to name of t
+		int comparison = compare(x, t.ele.getName());
 		
 		if(comparison < 0)
 			return contains(x, t.left);
@@ -68,20 +70,20 @@ public class BST implements Comparator<String> {
 	}
 	
 	//instantiate root, count
-	private Node root;
+	private Node<Person> root;
 	
 	//insert method
-	public void insert(String x)
+	public void insert(Person x)
 	{
 		root = insert(x, root);
 	}
 	
-	private Node insert(String x, Node t)
+	private Node<Person> insert(Person x, Node<Person> t)
 	{
 		if(t == null)
-			return new Node(x, null, null);
-		
-		int comparison = compare(x, t.ele);
+			return new Node<Person>(x, null, null);
+		//compares x name to name of t
+		int comparison = compare(x.getName(), t.ele.getName());
 		
 		if(comparison < 0)
 			t.left = insert(x, t.left);
@@ -93,4 +95,23 @@ public class BST implements Comparator<String> {
 		
 		return t;
 	}
+	
+	public void build(Person[] ppl){
+		for(Person p : ppl){
+			insert(p);
+		}
+		
+	
+		
+		
+	}
+	
+//		for testing	
+//	public static void main(String[] args){
+//		BST b = new BST();
+//		b.insert("Penny");
+//		b.insert("Penne");
+//		b.insert("Penna");
+//		System.out.print(b.contains("Penna"));
+//	}
 }

@@ -25,37 +25,11 @@ public class filePresenter {
 		
 		firstFileList = fileReader.storeAllList;
 		
-//		for(int i = 0; i < firstFileList.size(); i++)
-//		{
-//			System.out.println(firstFileList.get(i) + " First ");
-//		}
-		
-	//	hashingPeople = new Hashing();
 
 		mergeSortList = MergeSorter.mergeSort(hashingPeople.getPersonArray());
 		quickSortList = QuickSorter.quicksort(hashingPeople.getPersonArray());
 		heapSorterList = HeapSorter.heapSort(hashingPeople.getPersonArray());
 		
-		
-		
-//		for(int i = 0; i < heapSorterList.size(); i++)
-//		{
-//			System.out.println(heapSorterList.get(i) + " Heap ");
-//		}
-		
-		//quickSortList = QuickSorter.
-		
-		//mergeSortList = mergeSortResult.sort(hashingPeople.people);
-		
-//		for(int i = 0; i < mergeSortList.size(); i++)
-//		{
-//			System.out.println(mergeSortList.get(i) + " merge Sort ");
-//		}
-//		
-//		for(int i = 0; i < quickSortList.size(); i++)
-//		{
-//			System.out.println(quickSortList.get(i) + " QUICK");
-//		}
 
 		
 	}
