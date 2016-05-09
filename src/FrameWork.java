@@ -54,6 +54,48 @@ public class FrameWork extends JFrame {
 		/////////////////////////////////////////////////////////////////////////
 		resultField = new JPanel();
 		resultField.setLayout(new GridLayout(row,column));
+        
+		
+		
+		// Merge Sort weight
+				JButton original = new JButton("Sort by id");
+				buttonKeys.add(original);
+				original.addActionListener(new ActionListener() {
+					
+
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						
+						resultValue.clear();
+						
+						result = presenter.firstFileList;
+						resultField.repaint();
+						resultField = new JPanel();
+				
+						resultField.setLayout(new GridLayout(row,column));	
+						
+						for(int i = 0; i < result.size(); i++)
+						{
+							String[] s = result.get(i).split(" ");
+							for(String sS : s)
+							{
+								resultValue.add(sS);
+							}
+						}
+						
+						for(int i = 0; i < resultValue.size(); i++)
+						{
+							comeOut = new JLabel();
+							comeOut.setText(resultValue.get(i));
+							resultField.add(comeOut);
+						}
+						
+						theFrame.add(resultField, BorderLayout.CENTER);
+						theFrame.setVisible(true);
+						// TODO Auto-generated method stub
+					}
+
+				});
 
 		// Height sort with quick Sort
 		JButton quickSortButton = new JButton("Height Sort");
@@ -170,9 +212,12 @@ public class FrameWork extends JFrame {
 			}
 
 		});
+		
 
 		JTextField searchBar = new JTextField("Enter Name", 10);
+		buttonKeys.add(searchBar);
 		JButton searchButton = new JButton("Search");
+		buttonKeys.add(searchButton);
 		searchButton.addActionListener(new ActionListener(){
 
 			@Override
@@ -198,12 +243,16 @@ public class FrameWork extends JFrame {
 			resultField.add(comeOut);
 		}
 		
-
+		JPanel sideBar = new JPanel();
+		sideBar.setLayout(new BorderLayout(0,0));
+		JScrollPane scrollPane = new JScrollPane(resultField);
+		sideBar.add(scrollPane);
+		
+		theFrame.add(sideBar,BorderLayout.CENTER);
 		theFrame.add(buttonKeys, BorderLayout.SOUTH);
-		theFrame.add(titleField,BorderLayout.NORTH);
-//		
-		try{ theFrame.add(resultField, BorderLayout.CENTER);}
-		catch(Exception e){	e.printStackTrace(); }
+		theFrame.add(titleField,BorderLayout.NORTH);		
+		//try{ theFrame.add(resultField, BorderLayout.CENTER);}
+		//catch(Exception e){	e.printStackTrace(); }
 		
 		theFrame.setSize(800, 900);
 		theFrame.setVisible(true);
