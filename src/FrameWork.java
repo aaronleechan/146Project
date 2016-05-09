@@ -55,8 +55,8 @@ public class FrameWork extends JFrame {
 		resultField = new JPanel();
 		resultField.setLayout(new GridLayout(row,column));
 
-
-		JButton quickSortButton = new JButton("Sort height");
+		// Height sort with quick Sort
+		JButton quickSortButton = new JButton("Height Sort");
 		buttonKeys.add(quickSortButton);
 		quickSortButton.addActionListener(new ActionListener() {
 
@@ -92,8 +92,9 @@ public class FrameWork extends JFrame {
 				// TODO Auto-generated method stub
 			}
 		});
-
-		JButton heapSortButton = new JButton("heap Sort");
+		
+		// Heart Rate Sort 
+		JButton heapSortButton = new JButton("Heart Rate Sort");
 		buttonKeys.add(heapSortButton);
 		heapSortButton.addActionListener(new ActionListener() {
 
@@ -130,7 +131,8 @@ public class FrameWork extends JFrame {
 			}
 		});
 
-		JButton mergeSortButton = new JButton("merge Sort");
+		// Merge Sort weight
+		JButton mergeSortButton = new JButton("Weight Sort");
 		buttonKeys.add(mergeSortButton);
 		mergeSortButton.addActionListener(new ActionListener() {
 			
