@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class Hashing {
 	public static Person[] people = new Person[10];
 	private static int count = 0;
@@ -31,5 +36,11 @@ public class Hashing {
 		count++;
 		
 		return people;
+	}
+	
+	public static Person[] getPersonArray(){
+		List<Person> list = new ArrayList<Person>(Arrays.asList(people));
+		list.removeAll(Collections.singleton(null));
+		return list.toArray(new Person[list.size()]);
 	}
 }

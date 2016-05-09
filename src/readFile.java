@@ -6,10 +6,12 @@ import java.util.Scanner;
 public class readFile {
 	
 	public ArrayList<String> storeAllList = new ArrayList<String>();
+
 	//Only to read a file
 	
 	public void read() {
 		
+	
 		// Read the file
 				System.out.println("Read File");
 				String filename = new Scanner(System.in).nextLine();
@@ -21,6 +23,13 @@ public class readFile {
 					{
 						String line = in.nextLine();
 
+<<<<<<< HEAD
+=======
+
+						//storeAllList.add(line);
+						
+
+>>>>>>> 20f21fe367747fa4831a90204fc91a958e7b3264
 						Scanner wd = new Scanner(line);
 						while(wd.hasNext())
 						{
@@ -32,11 +41,13 @@ public class readFile {
 							int age = wd.nextInt();
 							String gender = wd.next();
 							int hrt = wd.nextInt();
-							
+
 							Person p = new Person(name, age, wt, ht, gender, hrt);
 							Hashing.hash(p); //person added to people array
 							
+
 						}
+<<<<<<< HEAD
 						wd.close();
 					}
 					in.close();			
@@ -52,11 +63,34 @@ public class readFile {
 					for(Person person: Hashing.people){
 						if(person != null) storeAllList.add(person.toString());
 					}
+=======
+
+
+						wd.close();
+					}
+					in.close();
+
+
+					for(Person person: Hashing.people){
+						if(person != null) storeAllList.add(person.toString());
+					}
+				
+>>>>>>> 20f21fe367747fa4831a90204fc91a958e7b3264
 				} catch (FileNotFoundException e) {
 				
 					e.printStackTrace();
 				}	  
+<<<<<<< HEAD
+=======
+
+
+		// TODO Auto-generated method stub	
+
+		//storeAllList.clear();
+		// TODO Auto-generated method stub	
+>>>>>>> 20f21fe367747fa4831a90204fc91a958e7b3264
 	}
+	
 	
 	public void readFile(){
 		
@@ -64,12 +98,12 @@ public class readFile {
 		{
 			System.out.println(storeAllList.get(i));
 		}
+
+<<<<<<< HEAD
+=======
 	}
 
-	// ArrayList<String> storeAllList = new ArrayList<String>(); //want a full
-	// array
-	// Only to read a file
-
+>>>>>>> 20f21fe367747fa4831a90204fc91a958e7b3264
 }
 	
 
