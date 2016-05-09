@@ -14,6 +14,7 @@ public class FrameWork extends JFrame {
 	JPanel resultField;
 	JPanel resultFieldColumn;
 	JLabel comeOut;
+	boolean nameExist = false;
 	
 	String[] title = { "id ", "First Name", "Last Name", "age" , "gender" , "weight" , "height" , "heart rate"}; 
 
@@ -214,7 +215,7 @@ public class FrameWork extends JFrame {
 		});
 		
 
-		JTextField searchBar = new JTextField("Enter Name", 10);
+		final JTextField searchBar = new JTextField("Enter Name", 10);
 		buttonKeys.add(searchBar);
 		JButton searchButton = new JButton("Search");
 		buttonKeys.add(searchButton);
@@ -222,6 +223,8 @@ public class FrameWork extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				String name = searchBar.getText();
+				
 				// TODO Auto-generated method stub
 				
 			}

@@ -24,6 +24,9 @@ public class readFile {
 						String line = in.nextLine();
 
 
+						//storeAllList.add(line);
+						
+
 						Scanner wd = new Scanner(line);
 						while(wd.hasNext())
 						{
@@ -46,23 +49,35 @@ public class readFile {
 					}
 					in.close();			
 						
+						
+					
+					//for testing. prints each Person.
+					for(Person ppl : Hashing.people)
+					{
+						System.out.println(ppl);
+					}
+		
+					for(Person person: Hashing.people){
+						if(person != null) storeAllList.add(person.toString());
+					}
+
+						wd.close();
+					}
+					in.close();			
+						
 
 
 					for(Person person: Hashing.people){
 						if(person != null) storeAllList.add(person.toString());
 					}
-				
+
+
 
 				} catch (FileNotFoundException e) {
 				
 					e.printStackTrace();
 				}	  
-
-
-
-
 		// TODO Auto-generated method stub	
-
 	}
 	
 	
@@ -72,10 +87,10 @@ public class readFile {
 		{
 			System.out.println(storeAllList.get(i));
 		}
+	}
 
 
 	}
-
 
 }
 	
