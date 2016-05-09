@@ -23,13 +23,10 @@ public class readFile {
 					{
 						String line = in.nextLine();
 
-<<<<<<< HEAD
-=======
 
 						//storeAllList.add(line);
 						
 
->>>>>>> 20f21fe367747fa4831a90204fc91a958e7b3264
 						Scanner wd = new Scanner(line);
 						while(wd.hasNext())
 						{
@@ -47,7 +44,7 @@ public class readFile {
 							
 
 						}
-<<<<<<< HEAD
+
 						wd.close();
 					}
 					in.close();			
@@ -63,32 +60,24 @@ public class readFile {
 					for(Person person: Hashing.people){
 						if(person != null) storeAllList.add(person.toString());
 					}
-=======
-
 
 						wd.close();
 					}
-					in.close();
+					in.close();			
+						
 
 
 					for(Person person: Hashing.people){
 						if(person != null) storeAllList.add(person.toString());
 					}
-				
->>>>>>> 20f21fe367747fa4831a90204fc91a958e7b3264
+
+
+
 				} catch (FileNotFoundException e) {
 				
 					e.printStackTrace();
 				}	  
-<<<<<<< HEAD
-=======
-
-
 		// TODO Auto-generated method stub	
-
-		//storeAllList.clear();
-		// TODO Auto-generated method stub	
->>>>>>> 20f21fe367747fa4831a90204fc91a958e7b3264
 	}
 	
 	
@@ -98,12 +87,11 @@ public class readFile {
 		{
 			System.out.println(storeAllList.get(i));
 		}
-
-<<<<<<< HEAD
-=======
 	}
 
->>>>>>> 20f21fe367747fa4831a90204fc91a958e7b3264
+
+	}
+
 }
 	
 
